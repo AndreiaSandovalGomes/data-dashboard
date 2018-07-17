@@ -3,8 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet"> 
   </head>
-  <body>
+  <body class="text-uppercase">
+    <header class="header text-uppercase">
+      <div class="home">
+      <img class="logo" src="assets/images/logo-laboratoria.svg" width="151px" />
+      </div>
+    </header>
+    <section class="menu">
+      <select class="drop" id="dropMenu" onchange="classSelection(this.id, 'classes')"></select>
+      <select class="drop" id="classes"></select>
+    </section>
+
+    <section class="dashboard">
+      <div>
+        <ul class="block">
+          <div class="enrollment">enrollment<li id="totalDeveloper" class="box"></li></div>
+          <li class="box">tech skills</li>
+          <li class="box">soft skills</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="block"> 
+          <li class="box">student stasifaction</li>
+          <li class="box">achievement</li>
+          <li class="box">net promoter score</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="block"> 
+          <div class="teacher-rating">teacher rating<li id="note" class="box"></li></div>
+          <div class="jedi-rating">jedi master rating<li id="jediNote" class="box"></li></div>
+        </ul>
+      </div>
+    </section>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
