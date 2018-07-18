@@ -5,6 +5,9 @@
    <title>Data Dashboard</title>
    <link href="css/main.css" rel="stylesheet" type="text/css" />
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+   <script src="https://code.highcharts.com/highcharts.js"></script>
+   <script src="https://code.highcharts.com/modules/exporting.js"></script>
+   <script src="https://code.highcharts.com/modules/export-data.js"></script>
  </head>
  <body class="text-uppercase">
    <header class="header text-uppercase">
@@ -13,13 +16,11 @@
      </div>
    </header>
    <section class="menu">
-     <select class="drop" id="dropMenu" onchange="classSelection(this.id, 'classes')"></select>
+     <select class="drop" id="dropMenu" onchange="classSelection(this.id,'classes')"></select>
      <select class="drop" id="classes"></select>
-   </section>
-   <section class="navBar">
-     <input type="button" onclick="function linkStudents()" value="Students">
-     <input type="button" onclick="function linkMentors()" value="Coach">
-   </section>
+     <a href="students.html" id="perfil" target="_blank" onclick="function linkStudents()">Students</a>
+    </section>
+
    <section class="dashboard">
      <div>
        <ul class="block">
@@ -31,17 +32,19 @@
            <h1>Tech skills</h1>
            <li class="box"></li>
           </div>
-          <div class="soft-skills">
-           <h1>soft skills</h1>
-           <li class="box"></li>
-         </div>
+          <div class="soft-skills">softskills<li class="box" id="hse"></li>
+          <!-- <select class="drop" id="hse">softskills</select> -->
+          </div>
        </ul>
      </div>
      <div>
        <ul class="block">
-         <li class="box">student stasifaction</li>
-         <li class="box">achievement</li>
-         <li class="box">net promoter score</li>
+         <div class="student-satisfaction">student satisfaction<li id="exceed" class="box"></li>
+        <!-- <div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto">
+         </div> -->
+         </div>
+         <div class="achievement">achievement<li class="box" id="meet"></li></div>
+         <div class="net-promoter">net promoter score<li class="box" id="nps"></li></div>
        </ul>
      </div>
      <div>
@@ -53,8 +56,9 @@
    </section>
 
 
- <script type="text/javascript"src="js/data.js"></script> -->
+ <script type="text/javascript"src="js/data.js"></script>
    <!-- Aquí va tus archivos JS -->
    <script type="text/javascript"src="js/app.js"></script>
+
    </body>
    </html>
