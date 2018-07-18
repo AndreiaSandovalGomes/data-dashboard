@@ -60,7 +60,7 @@ function carregaProgramadoras(){
   }
   }
 
-
+// A pontuação média das professoras.
 classes.addEventListener("change", teacherNote);
 function teacherNote(){
   var teacherRating = document.getElementById("note");
@@ -81,7 +81,7 @@ function teacherNote(){
       }
     }
 
-
+// A pontuação média das Jedi Master
 classes.addEventListener("change", jediNote);
 function jediNote(){
   var dropMenu = document.getElementById("dropMenu");
@@ -100,7 +100,33 @@ function jediNote(){
         var noteQuantity = data[dropMenu][classes]["ratings"].length;
         var media = sum / noteQuantity;
         print.innerHTML = media.toFixed(2);
-}
+      }
+        jediRating.appendChild(print);
+
+      }
+    }
+
+// SOFT SKILLS - O valor e a porcentagem que representam o número 
+// total de alunas que excedem a meta de pontos de HSE (70% - 1200), em média, e por sprint.
+classes.addEventListener("change", softSkills);
+function softSkills(){
+  var dropMenu = document.getElementById("dropMenu");
+  var classes = document.getElementById("classes");
+  var jediRating = document.getElementById("jediNote");
+  var print = document.createElement("li");
+  var dropMenu = document.getElementById("dropMenu").value;
+  var classes = document.getElementById("classes").value;
+  var sum = 0;
+
+  jediRating.innerHTML = "";
+
+      for(note in data[dropMenu][classes]["ratings"]){
+        if(data[dropMenu][classes]["ratings"][note]["jedi"] != 0){
+        sum += data[dropMenu][classes]["ratings"][note]["jedi"];
+        var noteQuantity = data[dropMenu][classes]["ratings"].length;
+        var media = sum / noteQuantity;
+        print.innerHTML = media.toFixed(2);
+      }
         jediRating.appendChild(print);
 
       }
@@ -109,43 +135,3 @@ function jediNote(){
 
 
 
-
-//
-//       // }else{
-//       //
-//
-//       }
-//
-//       teachers.document.createElement("li");
-//       note.appendChild(teachers);
-//     }
-//   }
-// }
-
-
-// classes.addEventListener("change", carregaProgramadoras);
-// function carregaProgramadoras(){
-//   // var dropMenu = document.getElementById("dropMenu");
-//   // var sede = dropMenu.value;
-//   var listaProgramadoras = document.getElementById("totalDeveloper");
-//   listaProgramadoras.innerHTML = "";
-//   for(sede in data){
-//   for(turma in data[sede]){
-//     for(estudante in data[sede][turma]["students"]){
-//       (data[sede][turma]["students"][estudante]["active"]);
-//
-//       if(data[sede][turma]["students"][estudante]["active"] === false){
-//
-//       var  inativo = inativo + 1;
-//
-//       }else{
-//       var  ativo = ativo + 1;
-//
-//       }
-//       total = total + 1;
-//       var total = document.createElement("li");
-//       listaProgramadoras.appendChild(total);
-//     }
-//   }
-// }
-// }
