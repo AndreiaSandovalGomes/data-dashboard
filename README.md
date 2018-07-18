@@ -6,6 +6,9 @@
 
 ***
 
+A documentação do processo de desenvolvimento do Dasboard poderá ser consultada por aqui: 
+https://trello.com/b/y7vgOJAY/dashboard-andreia-e-ana
+
 ## Flujo de trabajo
 
 1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)

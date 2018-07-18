@@ -12,53 +12,71 @@
  <body class="text-uppercase">
    <header class="header text-uppercase">
      <div class="home">
-     <img class="logo" src="assets/images/Laboratoria_RGB_logo-03.png" width="151px" />
+     <img class="logo" src="assets/images/Laboratoria_RGB_logo-03.png" width="251px" />
      </div>
    </header>
    <section class="menu">
      <select class="drop" id="dropMenu" onchange="classSelection(this.id,'classes')"></select>
      <select class="drop" id="classes"></select>
-     <a href="students.html" id="perfil" target="_blank" onclick="function linkStudents()">Students</a>
+     <a href="students.html" class="drop" id="perfil" target="_blank" onclick="function linkStudents()">Students</a>
     </section>
-
-   <section class="dashboard">
+    <section class="dashboard">
      <div>
        <ul class="block">
-          <div class="enrollment">
-           <h1>enrollment</h1>
-           <li id="totalDeveloper" class="box"></li>
+          <div>
+           <h1 class="title">enrollment</h1>
+           <li id="totalDeveloper" class="box text"></li>
+           <li></li> <img class="box1" src="assets/images/circle-graphic.png" width="51px"></li>
           </div>
-          <div class="tech-skills">
-           <h1>Tech skills</h1>
-           <li class="box"></li>
+          <div>
+           <h1 class="title">tech skills</h1>
+           <li class="box text" id="techSk"></li>
+           <li></li> <img class="box1" src="assets/images/bar-graph.png" width="51px"></li>
           </div>
-          <div class="soft-skills">softskills<li class="box" id="hse"></li>
-          <!-- <select class="drop" id="hse">softskills</select> -->
+          <div>
+           <h1 class="title">softskills</h1>
+           <li class="box text" id="hse"></li>
+           <li></li> <img class="box1" src="assets/images/bar-graph.png" width="51px"></li>
           </div>
        </ul>
      </div>
      <div>
        <ul class="block">
-         <div class="student-satisfaction">student satisfaction<li id="exceed" class="box"></li>
-        <!-- <div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto">
-         </div> -->
-         </div>
-         <div class="achievement">achievement<li class="box" id="meet"></li></div>
-         <div class="net-promoter">net promoter score<li class="box" id="nps"></li></div>
+         <div>
+         <h1 class="title">student satisfaction</h1>
+         <li id="exceed" class="box text"></li>
+         <li></li> <img class="box1" src="assets/images/rectangular-graphic.png" width="51px"></li>         
+        </div>
+        <div>
+          <h1 class="title">achievement</h1>
+          <li class="box text" id="meet"></li>
+          <li></li> <img class="box1" src="assets/images/circle-graphic.png" width="51px"></li>
+        </div>
+        <div>
+         <h1 class="title">net promoter score</h1>
+         <li class="box text" id="nps"></li>
+         <li></li> <img class="box1" src="assets/images/rectangular-graphic.png" width="51px"></li>
+        </div>
        </ul>
      </div>
      <div>
        <ul class="block">
-         <div class="teacher-rating">teacher rating<li id="note" class="box"></li></div>
-         <div class="jedi-rating">jedi master rating<li id="jediNote" class="box"></li></div>
+
+        <div>
+          <h1 class="title">teacher rating</h1>
+          <li id="note" class="box text"></li>
+          <li></li> <img class="box1" src="assets/images/circle-graphic.png" width="51px"></li>
+        </div>
+
+        <div>
+          <h1 class="title">jedi master rating</h1>
+          <li id="jediNote" class="box text"></li>
+          <li></li> <img class="box1" src="assets/images/circle-graphic.png" width="51px"></li>
+        </div>
        </ul>
      </div>
-   </section>
-
-
- <script type="text/javascript"src="js/data.js"></script>
-   <!-- Aquí va tus archivos JS -->
+    </section>
+   <script type="text/javascript"src="js/data.js"></script>
    <script type="text/javascript"src="js/app.js"></script>
-
    </body>
-   </html>
+</html>
